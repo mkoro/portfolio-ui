@@ -1,0 +1,12 @@
+<Page>
+  <Section caption="Section Header">
+    <Label caption="Placeholder Label 2" />
+    <TextArea />
+  </Section>
+  <Label caption="TextInput label" />
+  <TextInput />
+  <ButtonRow>
+    <Button caption="Go back" />
+    <Button caption="Submit" rightAligned="true" />
+  </ButtonRow>
+</Page>

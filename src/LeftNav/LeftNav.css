@@ -1,0 +1,23 @@
+#left-nav {
+  height: 100%;
+  width: 300px;
+  background-color: #55f;
+  color: white;
+  display: inline-block;
+}
+
+#left-nav ul {
+  margin: 0;
+}
+
+#left-nav li {
+  list-style: none;
+}
+
+#left-nav li span {
+  cursor: pointer;
+}
+
+#left-nav li.current {
+  font-weight: bold;
+}

@@ -1,0 +1,29 @@
+.button {
+  height: 2rem;
+  background-color: #3333ff;
+  transition: background-color 0.5s ease;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1.8rem;
+  padding: 0 1rem;
+  min-width: 4rem;
+}
+
+.button.left:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.button.right:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.button:hover {
+  background-color: #6666ff;
+  transition: 0.5s ease;
+}
+
+.button:active {
+  background-color: #aaaaff;
+}

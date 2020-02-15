@@ -1,0 +1,13 @@
+[{
+    "url": "/foo",
+    "title": "Foo"
+  },
+  {
+    "url": "/bar",
+    "title": "Bar"
+  },
+  {
+    "url": "/editor",
+    "title": "Editor"
+  }
+]

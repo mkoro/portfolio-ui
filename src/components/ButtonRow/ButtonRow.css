@@ -1,0 +1,8 @@
+.button-row {
+  display: flex;
+  width: 100%;
+}
+
+.button-row.right {
+  justify-content: flex-end;
+}

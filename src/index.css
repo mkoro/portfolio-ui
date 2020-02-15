@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.form-field,
+.label,
+.section-content,
+.section-header {
+  display: block;
+}
+
+.form-field+.form-field,
+.form-field+.label,
+.section-content+.label,
+.label+.label {
+  margin-top: 1rem;
+}

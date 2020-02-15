@@ -1,0 +1,16 @@
+section {
+  border: 1px solid #ddd;
+}
+
+.editor-button {
+  background-color: #a00;
+  width: auto;
+}
+
+.editor-button:hover {
+  background-color: #a55;
+}
+
+.editor-button:active {
+  background-color: #d77;
+}
