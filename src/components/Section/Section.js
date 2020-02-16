@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { SlideDown } from "react-slidedown";
 import { FORM_FIELD_CLASSNAME } from "../../constants";
+import "react-slidedown/lib/slidedown.css";
 import "./Section.css";
 
 const EXPAND_GLYPH = "˃";
@@ -28,9 +30,9 @@ export default function Section(props) {
         <span className="glyph">{`${captionGlyph} `}</span>
         {caption}
       </div>
-      <div className={`section-content ${collapsed ? "hidden" : ""}`}>
-        {children}
-      </div>
+      <SlideDown>
+        {!collapsed && <div className="section-content">{children}</div>}
+      </SlideDown>
     </>
   );
 }

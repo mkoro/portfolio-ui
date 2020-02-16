@@ -5,3 +5,8 @@
   box-sizing: border-box;
   padding: 2rem;
 }
+
+.page-builder>div {
+  min-width: 250px;
+  max-width: 1000px;
+}

@@ -34,3 +34,11 @@ code {
 .label+.label {
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 800px) {
+
+  textarea.form-field,
+  input.form-field {
+    max-width: 200px;
+  }
+}

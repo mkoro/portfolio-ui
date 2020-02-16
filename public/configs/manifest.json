@@ -1,10 +1,10 @@
 [{
-    "url": "/foo",
-    "title": "Foo"
+    "url": "/introduction",
+    "title": "Introduction"
   },
   {
-    "url": "/bar",
-    "title": "Bar"
+    "url": "/example_form",
+    "title": "Example Form"
   },
   {
     "url": "/editor",

@@ -1,6 +1,7 @@
 import { ELEMENT_NAME_SYMBOL } from "../constants";
 
 export default function parseXmlConfig(xml) {
+  if (!xml.startsWith("<Page>")) return undefined;
   const parser = new DOMParser();
   const dom = parser.parseFromString(xml, "application/xml");
   const parsed = [];

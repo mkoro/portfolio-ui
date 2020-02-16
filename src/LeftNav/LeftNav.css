@@ -1,9 +1,34 @@
 #left-nav {
   height: 100%;
   width: 300px;
+  max-width: 300px;
+  transition: max-width 1s ease;
+  overflow-x: hidden;
   background-color: #55f;
   color: white;
   display: inline-block;
+}
+
+#left-nav.hidden {
+  max-width: 0;
+  transition: max-width 1s ease;
+}
+
+#left-nav-button-bar {
+  height: 100%;
+  background-color: #55f;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+#left-nav-button-bar span {
+  cursor: pointer;
+}
+
+#left-nav.hidden+#left-nav-button-bar {
+  padding-left: 1rem;
 }
 
 #left-nav ul {
@@ -12,6 +37,9 @@
 
 #left-nav li {
   list-style: none;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-variant: small-caps;
 }
 
 #left-nav li span {
@@ -20,4 +48,30 @@
 
 #left-nav li.current {
   font-weight: bold;
+}
+
+.nav-title {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-variant: small-caps;
+}
+
+.nav-subtitle-container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.nav-spacer {
+  flex-grow: 1;
+  margin: 0 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid white;
+}
+
+.nav-subtitle {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }

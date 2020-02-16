@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import MainContent from "./MainContent";
 
 ReactDOM.render(
   <Router>
+    <Route exact path="/">
+      <Redirect to="/introduction" />
+    </Route>
     <Route component={MainContent} />
   </Router>,
   document.getElementById("root")
