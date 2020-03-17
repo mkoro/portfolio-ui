@@ -15,6 +15,7 @@ code {
 #root {
   display: flex;
   position: absolute;
+  overflow-y: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -23,14 +24,15 @@ code {
 
 .form-field,
 .label,
-.section-content,
+.react-slidedown,
 .section-header {
   display: block;
 }
 
 .form-field+.form-field,
 .form-field+.label,
-.section-content+.label,
+.react-slidedown+.label,
+.react-slidedown+.form-field,
 .label+.label {
   margin-top: 1rem;
 }

@@ -1,6 +1,7 @@
 {
   "name": "ui-framework",
   "version": "0.1.0",
+  "homepage": "https://koroknay.tech/ui-portfolio",
   "private": true,
   "dependencies": {
     "@monaco-editor/react": "^3.1.0",

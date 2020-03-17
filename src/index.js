@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import MainContent from "./MainContent";
 
 ReactDOM.render(
-  <Router>
+  <Router basename="/ui-portfolio">
     <Route exact path="/">
       <Redirect to="/introduction" />
     </Route>

@@ -1,12 +1,13 @@
 .page-builder {
   display: inline-block;
   height: 100%;
-  width: calc(100% - 300px);
+  flex-grow: 1;
   box-sizing: border-box;
   padding: 2rem;
+  overflow-y: auto;
 }
 
-.page-builder>div {
+.page-builder > div {
   min-width: 250px;
   max-width: 1000px;
 }

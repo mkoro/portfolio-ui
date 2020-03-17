@@ -1,10 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./LeftNav.css";
 
+const PORTFOLIO_HOME = "https://koroknay.tech";
+
 export default function LeftNav(props) {
   const { links, location: { pathname } = {}, history: { push } = {} } = props;
 
   const [collapsed, setCollapsed] = useState(false);
+  const [thinMode, setThinMode] = useState(false);
 
   const toggleLeftNav = useCallback(() => {
     setCollapsed(prevState => {
@@ -15,21 +18,26 @@ export default function LeftNav(props) {
   const navigate = useCallback(
     event => {
       const url = event.target.attributes.getNamedItem("data-key").value;
-      push(url);
+      url.startsWith("http") ? window.location.assign(url) : push(url);
+
+      if (thinMode) setCollapsed(true);
     },
-    [push]
+    [push, thinMode]
   );
 
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth < 850) {
         setCollapsed(true);
+        setThinMode(true);
       } else {
         setCollapsed(false);
+        setThinMode(false);
       }
     };
 
     window.addEventListener("resize", onResize);
+    onResize();
   }, []);
 
   return (
@@ -49,6 +57,11 @@ export default function LeftNav(props) {
               </span>
             </li>
           ))}
+          <li>
+            <span data-key={PORTFOLIO_HOME} onClick={navigate}>
+              {"> Back to Portfolio Main Page <"}
+            </span>
+          </li>
         </ul>
       </div>
       <div id="left-nav-button-bar">

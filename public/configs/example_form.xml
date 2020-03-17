@@ -1,10 +1,14 @@
 <Page>
-  <Section caption="Section Header">
-    <Label caption="Placeholder Label 2" />
+  <Markdown source="## Sample form" />
+  <Markdown source="**Markdown** can be used for styled text." />
+  <Section caption="This Is A Section Header">
+    <Label caption="Any UI element can be placed inside a section." />
+    <Label caption="This is a TextArea:" />
     <TextArea />
   </Section>
-  <Label caption="TextInput label" />
+  <Label caption="TextInput:" />
   <TextInput />
+  <Markdown source="Buttons can be aligned to the left or to the right:" />
   <ButtonRow>
     <Button caption="Go back" />
     <Button caption="Submit" rightAligned="true" />

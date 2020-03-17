@@ -7,11 +7,17 @@ import Button from "../Button/Button";
 import "./Editor.css";
 
 const DEFAULT_EDITOR_VALUE = `<Page>
-  <Label caption="Use the editor at the bottom of this page to dynamically edit it!" />
-  <Label caption="Click the 'Update' button when you are done." />
+  <Markdown source="## Live Editor" />
+  <Markdown source="Use the **editor** at the bottom of this page to dynamically edit it!" />
+  <Markdown source="Click the _'Update'_ button when you are done." />
 
   <Label caption="Sample text input:" />
   <TextInput />
+
+  <Section caption="Section Header">
+    <Label caption="Placeholder Label 2" />
+    <TextArea />
+  </Section>
 
   <ButtonRow>
     <Button caption="Sample button" />
@@ -27,12 +33,8 @@ const MONACO_OPTIONS = {
 
 export default function TextArea(props) {
   const [isEditorReady, setIsEditorReady] = useState(false);
-  const [getEditorValue, setEditorValueGetter] = useState(() => () =>
-    DEFAULT_EDITOR_VALUE
-  );
-  const [parsedEditorValue, setParsedEditorValue] = useState(
-    memoizedParser(DEFAULT_EDITOR_VALUE)
-  );
+  const [getEditorValue, setEditorValueGetter] = useState(() => () => DEFAULT_EDITOR_VALUE);
+  const [parsedEditorValue, setParsedEditorValue] = useState(memoizedParser(DEFAULT_EDITOR_VALUE));
 
   const handleEditorDidMount = useCallback(valueGetter => {
     setIsEditorReady(true);
@@ -48,7 +50,7 @@ export default function TextArea(props) {
       <PageBuilder configuration={parsedEditorValue} />
       <Button
         className="editor-button"
-        caption="Update page with configuration from editor"
+        caption="Click here to update page with configuration from editor"
         hidden={!isEditorReady}
         onClick={onUpdateButtonClick}
       />

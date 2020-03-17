@@ -5,6 +5,7 @@ section {
 .editor-button {
   background-color: #a00;
   width: auto;
+  margin-bottom: 15px;
 }
 
 .editor-button:hover {

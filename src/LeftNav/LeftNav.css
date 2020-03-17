@@ -1,8 +1,8 @@
 #left-nav {
   height: 100%;
   width: 300px;
-  max-width: 300px;
-  transition: max-width 1s ease;
+  flex-shrink: 0;
+  transition: width 1s ease;
   overflow-x: hidden;
   background-color: #55f;
   color: white;
@@ -10,8 +10,8 @@
 }
 
 #left-nav.hidden {
-  max-width: 0;
-  transition: max-width 1s ease;
+  width: 0;
+  transition: width 1s ease;
 }
 
 #left-nav-button-bar {
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-#left-nav.hidden+#left-nav-button-bar {
+#left-nav.hidden + #left-nav-button-bar {
   padding-left: 1rem;
 }
 
